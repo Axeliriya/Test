@@ -20,4 +20,4 @@ let q1 = prompt('Введите обязательную статью расхо
     appData.expenses[q3] = q4;
 
 alert(appData.budget / 30);
-console.log(appData.budget - appData.expenses[q2]);
+console.log((appData.budget) - (appData.expenses[q1]));

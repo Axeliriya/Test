@@ -12,16 +12,21 @@ body {
 
 .container {
   background: #fcf7f9;
-  display: flex;
-  max-width: 1200px;
+  display: block;
+  width: 320px;
   margin: 0 auto;
   box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar {
   background: #43011c;
-  min-width: 370px;
+  width: 320px;
   padding: 20px;
+}
+
+.contacts-wrapper,
+.skills-wrapper {
+  display: block;
 }
 
 .my-photo {
@@ -31,9 +36,61 @@ body {
   border-radius: 50%;
 }
 
+@media (min-width: 520px) {
+  .container {
+    display: block;
+    width: 480px;
+  }
+
+  .sidebar {
+    min-width: 480px;
+  }
+
+  .contacts-wrapper,
+  .skills-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .my-photo {
+    width: 40%;
+  }
+}
+
+@media (min-width: 810px) {
+  .container {
+    display: flex;
+    width: 768px;
+  }
+
+  .sidebar {
+    min-width: 320px;
+  }
+
+  .contacts-wrapper,
+  .skills-wrapper {
+    display: block;
+  }
+
+  .my-photo {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1064px) {
+  .container {
+    display: flex;
+    width: 1024px;
+  }
+
+  .sidebar {
+    width: 320px;
+  }
+}
+
 .about-me-container {
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-top: 110px;
   padding-bottom: 110px;
 }
@@ -190,6 +247,10 @@ body {
   margin-bottom: 10px;
 }
 
+.profession-name {
+  text-transform: uppercase;
+}
+
 .profession-company {
   color: #ff6b08;
 }
@@ -226,17 +287,21 @@ body {
   margin-bottom: 21px;
 }
 
+.education-wrapper:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .educational-institution {
   color: #ff6b08;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .specialty {
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
